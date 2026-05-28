@@ -1,5 +1,6 @@
 import { AboutSection } from '@/components/AboutSection'
 import { ContactsSection } from '@/components/ContactsSection'
+import { FloatingChatButton } from '@/components/FloatingChatButton'
 import { Footer } from '@/components/Footer'
 import { Header } from '@/components/Header'
 import { HeroSection } from '@/components/HeroSection'
@@ -18,6 +19,7 @@ function App() {
         <ContactsSection />
       </main>
       <Footer />
+      <FloatingChatButton />
     </div>
   )
 }

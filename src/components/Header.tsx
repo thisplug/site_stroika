@@ -163,11 +163,11 @@ export function Header() {
             alt={site.brand}
             className="h-10 w-auto rounded-md border border-brand/20 object-contain sm:h-12"
           />
-          <div className="hidden min-w-0 md:block">
-            <p className="font-brand truncate text-lg font-bold uppercase tracking-[0.005em] text-brand sm:text-xl">
+          <div className="min-w-0">
+            <p className="font-brand truncate text-sm font-bold uppercase tracking-[0.005em] text-brand sm:text-xl">
               {site.brand}
             </p>
-            <p className="truncate text-xs text-muted">{site.tagline}</p>
+            <p className="hidden truncate text-xs text-muted md:block">{site.tagline}</p>
           </div>
         </a>
 
