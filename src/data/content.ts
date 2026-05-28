@@ -1,6 +1,8 @@
+const asset = (path: string) => `${import.meta.env.BASE_URL}${path}`
+
 export const site = {
   brand: 'ДРОГАН',
-  logo: '/logo-drogan.png',
+  logo: asset('logo-drogan.png'),
   tagline: 'Механизированная штукатурка',
   phone: '8 (900) 000-00-00',
   phoneHref: 'tel:+79000000000',
@@ -24,8 +26,7 @@ export const hero = {
   description:
     'Механизированная штукатурка представляет собой быстрый и аккуратный процесс обработки стен. Это прекрасный вариант механизации для тех ситуаций, когда нужно выполнить задачу быстро и максимально аккуратно.',
   cta: 'Оставить заявку',
-  image:
-    '/hero-plaster.png',
+  image: asset('hero-plaster.png'),
 } as const
 
 export const features = [
@@ -74,7 +75,7 @@ export const about = {
     { value: '5 лет', label: 'гарантия на работы' },
     { value: '24 ч', label: 'выезд замерщика' },
   ],
-  image: '/about-team.png',
+  image: asset('about-team.png'),
 } as const
 
 export const reviews = {
