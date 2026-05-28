@@ -10,10 +10,10 @@ export function HeroSection() {
         src={hero.image}
         alt=""
         aria-hidden
-        className="absolute inset-0 h-full w-full object-cover object-[72%_center]"
+        className="absolute inset-0 h-full w-full object-cover object-[72%_center] xl:object-[72%_30%] 2xl:object-[72%_22%]"
       />
       <div
-        className="pointer-events-none absolute inset-0 bg-gradient-to-r from-white from-35% via-white/92 via-55% to-white/25"
+        className="pointer-events-none absolute inset-0 bg-gradient-to-r from-surface from-30% via-surface/95 via-55% to-surface/40"
         aria-hidden
       />
 
@@ -21,7 +21,7 @@ export function HeroSection() {
         <div className="grid w-full flex-1 items-stretch gap-8 lg:grid-cols-[minmax(0,1.2fr)_minmax(340px,28vw)] lg:gap-10 xl:gap-14 2xl:grid-cols-[minmax(0,1.25fr)_minmax(380px,26vw)]">
           <div className="flex min-h-0 flex-col justify-between gap-6 lg:gap-8">
             <div className="shrink-0">
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-muted sm:text-sm">
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-brand sm:text-sm">
                 {hero.overline}
               </p>
               <h1 className="mt-3 text-4xl font-extrabold uppercase leading-[1.02] tracking-tight text-ink sm:text-5xl lg:text-[3.25rem] xl:text-6xl 2xl:text-[4.25rem]">

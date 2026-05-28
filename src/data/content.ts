@@ -1,5 +1,6 @@
 export const site = {
-  brand: 'Пример',
+  brand: 'ДРОГАН',
+  logo: '/logo-drogan.png',
   tagline: 'Механизированная штукатурка',
   phone: '8 (900) 000-00-00',
   phoneHref: 'tel:+79000000000',

@@ -62,7 +62,7 @@ export function ContactForm({ className, id = 'contacts' }: ContactFormProps) {
     <div
       id={id}
       className={cn(
-        'rounded-3xl bg-white p-6 shadow-[0_8px_40px_rgba(28,28,30,0.08)] sm:p-8',
+        'rounded-3xl border border-brand/25 bg-card p-6 shadow-[0_8px_40px_rgba(212,175,55,0.08)] sm:p-8',
         className,
       )}
     >
@@ -120,7 +120,7 @@ export function ContactForm({ className, id = 'contacts' }: ContactFormProps) {
             aria-invalid={phoneError ? true : undefined}
             className={[
               'w-full rounded-xl bg-lavender px-4 py-3.5 text-sm text-ink outline-none placeholder:text-muted/70 focus:ring-2 focus:ring-brand/30',
-              phoneError && 'ring-2 ring-red-400/60',
+              phoneError && 'ring-2 ring-red-500/60',
             ]
               .filter(Boolean)
               .join(' ')}
@@ -139,7 +139,7 @@ export function ContactForm({ className, id = 'contacts' }: ContactFormProps) {
                 setAgreed(e.target.checked)
                 setSubmitted(false)
               }}
-              className="mt-1 h-4 w-4 rounded border-neutral-300 text-brand focus:ring-brand"
+              className="mt-1 h-4 w-4 rounded border-border text-brand focus:ring-brand"
             />
             <span className="text-xs leading-relaxed text-muted">{contactForm.privacy}</span>
           </label>

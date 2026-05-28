@@ -2,11 +2,18 @@ import { site } from '@/data/content'
 
 export function Footer() {
   return (
-    <footer className="w-full border-t border-neutral-200 bg-surface px-5 py-10 sm:px-8 lg:px-12 xl:px-16 2xl:px-20">
+    <footer className="w-full border-t border-border bg-card px-5 py-10 sm:px-8 lg:px-12 xl:px-16 2xl:px-20">
       <div className="flex w-full flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-        <div>
-          <p className="text-lg font-extrabold text-ink">{site.brand}</p>
-          <p className="mt-1 text-sm text-muted">{site.tagline} · Челябинск</p>
+        <div className="flex items-center gap-3">
+          <img
+            src={site.logo}
+            alt={site.brand}
+            className="h-10 w-auto rounded-md border border-brand/20 object-contain"
+          />
+          <div>
+            <p className="font-brand text-lg font-bold uppercase tracking-[0.005em] text-brand">{site.brand}</p>
+            <p className="mt-1 text-sm text-muted">{site.tagline} · Челябинск</p>
+          </div>
         </div>
         <a
           href={site.phoneHref}

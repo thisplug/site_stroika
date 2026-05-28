@@ -6,7 +6,7 @@ export function ReviewsSection() {
     <SectionShell id="reviews" title={reviews.title} subtitle={reviews.subtitle}>
       <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
         {reviews.items.map((review) => (
-          <article key={review.name} className="rounded-3xl bg-lavender p-6 sm:p-7">
+          <article key={review.name} className="rounded-3xl border border-border bg-lavender p-6 sm:p-7">
             <p className="text-sm leading-relaxed text-ink/90 sm:text-[15px]">
               «{review.text}»
             </p>

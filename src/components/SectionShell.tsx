@@ -24,8 +24,8 @@ export function SectionShell({
       id={id}
       className={cn(
         'w-full scroll-mt-20 px-5 py-16 sm:px-8 sm:py-20 lg:px-12 xl:px-16 2xl:px-20',
-        tone === 'white' && 'bg-white',
-        tone === 'surface' && 'bg-surface',
+        tone === 'white' && 'bg-surface',
+        tone === 'surface' && 'bg-card',
         className,
       )}
     >

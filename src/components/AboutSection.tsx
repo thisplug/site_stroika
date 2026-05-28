@@ -14,7 +14,7 @@ export function AboutSection() {
 
           <div className="grid grid-cols-2 gap-4 pt-2 sm:grid-cols-4 lg:grid-cols-2 xl:grid-cols-4">
             {about.stats.map((stat) => (
-              <div key={stat.label} className="rounded-2xl bg-white p-4">
+              <div key={stat.label} className="rounded-2xl border border-border bg-lavender p-4">
                 <p className="text-2xl font-extrabold text-brand">{stat.value}</p>
                 <p className="mt-1 text-sm text-muted">{stat.label}</p>
               </div>

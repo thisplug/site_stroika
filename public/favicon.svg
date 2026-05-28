@@ -1,4 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
-  <rect width="32" height="32" rx="8" fill="#4a61c1"/>
-  <text x="16" y="21" text-anchor="middle" fill="white" font-family="Arial,sans-serif" font-size="11" font-weight="700">E</text>
+  <rect width="32" height="32" rx="8" fill="#0a0a0a"/>
+  <rect x="4" y="4" width="24" height="24" rx="6" stroke="#d4af37" stroke-width="2"/>
+  <text x="16" y="21" text-anchor="middle" fill="#d4af37" font-family="Arial,sans-serif" font-size="11" font-weight="700">П</text>
 </svg>

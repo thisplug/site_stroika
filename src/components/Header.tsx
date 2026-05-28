@@ -151,23 +151,30 @@ export function Header() {
   }, [])
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-neutral-100/80 bg-white/90 backdrop-blur-md">
+    <header className="sticky top-0 z-50 w-full border-b border-border bg-surface/95 backdrop-blur-md">
       <div className="flex w-full items-center justify-between gap-3 px-5 py-4 sm:gap-6 sm:px-8 lg:px-12 xl:px-16 2xl:px-20">
         <a
           href="#hero"
           onClick={(e) => handleNavClick(e, '#hero')}
-          className="flex min-w-0 shrink items-baseline gap-2"
+          className="flex min-w-0 shrink items-center gap-2"
         >
-          <span className="truncate text-lg font-extrabold tracking-tight text-ink sm:text-2xl">
-            {site.brand}
-          </span>
-          <span className="hidden text-xs text-muted md:inline">{site.tagline}</span>
+          <img
+            src={site.logo}
+            alt={site.brand}
+            className="h-10 w-auto rounded-md border border-brand/20 object-contain sm:h-12"
+          />
+          <div className="hidden min-w-0 md:block">
+            <p className="font-brand truncate text-lg font-bold uppercase tracking-[0.005em] text-brand sm:text-xl">
+              {site.brand}
+            </p>
+            <p className="truncate text-xs text-muted">{site.tagline}</p>
+          </div>
         </a>
 
         <div className="flex items-center gap-2 sm:gap-3">
           <button
             type="button"
-            className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-neutral-300 text-ink lg:hidden"
+            className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-border text-brand lg:hidden"
             aria-label={mobileOpen ? 'Закрыть меню' : 'Открыть меню'}
             aria-expanded={mobileOpen}
             onClick={() => setMobileOpen((open) => !open)}
@@ -189,7 +196,7 @@ export function Header() {
               <span
                 aria-hidden
                 className={cn(
-                  'absolute rounded-full border border-neutral-300 bg-white/70 backdrop-blur-sm',
+                  'absolute rounded-full border border-brand/40 bg-brand/10 backdrop-blur-sm',
                   indicatorReady
                     ? 'transition-[left,top,width,height] duration-200 ease-out'
                     : 'opacity-0',
@@ -214,7 +221,7 @@ export function Header() {
                     onClick={(e) => handleNavClick(e, link.href)}
                     className={cn(
                       'relative z-10 rounded-full px-4 py-2 text-sm font-medium transition-colors xl:px-5',
-                      isActive ? 'text-ink' : 'text-ink/80 hover:text-ink',
+                      isActive ? 'text-brand' : 'text-ink/80 hover:text-brand',
                     )}
                   >
                     {link.label}
@@ -226,7 +233,7 @@ export function Header() {
 
           <a
             href={site.phoneHref}
-            className="shrink-0 rounded-full bg-brand px-3 py-2 text-xs font-semibold text-white transition-colors hover:bg-brand-hover sm:px-5 sm:py-2.5 sm:text-sm"
+            className="shrink-0 rounded-full bg-brand px-3 py-2 text-xs font-semibold text-black transition-colors hover:bg-brand-hover sm:px-5 sm:py-2.5 sm:text-sm"
           >
             {site.phone}
           </a>
@@ -234,7 +241,7 @@ export function Header() {
       </div>
 
       {mobileOpen && (
-        <nav className="border-t border-neutral-100 bg-white px-5 py-4 lg:hidden">
+        <nav className="border-t border-border bg-card px-5 py-4 lg:hidden">
           <ul className="flex flex-col gap-1">
             {navLinks.map((link) => {
               const isActive = link.href === activeHref
@@ -246,8 +253,8 @@ export function Header() {
                     className={cn(
                       'block rounded-xl px-4 py-3 text-base font-medium transition-colors',
                       isActive
-                        ? 'bg-lavender text-ink'
-                        : 'text-ink/80 hover:bg-neutral-50 hover:text-ink',
+                        ? 'bg-brand/15 text-brand'
+                        : 'text-ink/80 hover:bg-brand/10 hover:text-brand',
                     )}
                   >
                     {link.label}

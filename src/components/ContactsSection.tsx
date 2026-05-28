@@ -15,7 +15,7 @@ export function ContactsSection() {
       <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(340px,420px)] lg:gap-12">
         <div className="grid gap-4 sm:grid-cols-2">
           {contactItems.map((item) => (
-            <div key={item.label} className="rounded-2xl bg-lavender p-5 sm:p-6">
+            <div key={item.label} className="rounded-2xl border border-border bg-lavender p-5 sm:p-6">
               <p className="text-xs font-semibold uppercase tracking-wide text-muted">
                 {item.label}
               </p>
@@ -32,7 +32,7 @@ export function ContactsSection() {
             </div>
           ))}
 
-          <div className="rounded-2xl bg-surface p-5 sm:col-span-2 sm:p-6">
+          <div className="rounded-2xl border border-border bg-surface p-5 sm:col-span-2 sm:p-6">
             <p className="text-xs font-semibold uppercase tracking-wide text-muted">Зона работы</p>
             <p className="mt-2 text-base leading-relaxed text-ink/85">
               Челябинск и ближайшие районы. Выезд бригады и доставка материалов согласовываются при

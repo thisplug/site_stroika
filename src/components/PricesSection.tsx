@@ -9,7 +9,7 @@ export function PricesSection() {
         {prices.items.map((item) => (
           <article
             key={item.name}
-            className="flex flex-col rounded-3xl bg-white p-6 shadow-[0_4px_24px_rgba(28,28,30,0.05)]"
+            className="flex flex-col rounded-3xl border border-border bg-lavender p-6"
           >
             <h3 className="text-lg font-bold text-ink">{item.name}</h3>
             <p className="mt-3 text-2xl font-extrabold text-brand">{item.price}</p>
@@ -18,7 +18,7 @@ export function PricesSection() {
         ))}
       </div>
 
-      <div className="mt-10 flex flex-col items-start gap-4 rounded-3xl bg-lavender p-6 sm:flex-row sm:items-center sm:justify-between sm:p-8">
+      <div className="mt-10 flex flex-col items-start gap-4 rounded-3xl border border-brand/30 bg-lavender p-6 sm:flex-row sm:items-center sm:justify-between sm:p-8">
         <p className="max-w-2xl text-sm leading-relaxed text-ink/85 sm:text-base">
           Нужен точный расчёт? Оставьте заявку — приедем на замер бесплатно и подготовим смету под
           ваш объект.

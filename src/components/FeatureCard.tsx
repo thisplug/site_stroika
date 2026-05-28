@@ -11,7 +11,7 @@ export function FeatureCard({ icon, text, className }: FeatureCardProps) {
   return (
     <article
       className={cn(
-        'flex h-full flex-col gap-3 rounded-2xl bg-lavender p-4 sm:gap-4 sm:p-5 lg:p-6',
+        'flex h-full flex-col gap-3 rounded-2xl border border-border bg-lavender p-4 sm:gap-4 sm:p-5 lg:p-6',
         className,
       )}
     >
