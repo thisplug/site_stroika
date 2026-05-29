@@ -11,7 +11,7 @@ export function BrandMark({ className }: BrandMarkProps) {
       src={site.logo}
       alt={site.brand}
       className={cn(
-        'h-10 w-10 shrink-0 object-contain sm:h-12 sm:w-12',
+        'h-11 w-11 shrink-0 object-contain sm:h-14 sm:w-14',
         className,
       )}
     />

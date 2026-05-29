@@ -2,7 +2,7 @@ const asset = (path: string) => `${import.meta.env.BASE_URL}${path}`
 
 export const site = {
   brand: 'ДРОГАН',
-  logo: asset('logo-drogan.png'),
+  logo: asset('logo-om-hex.png'),
   tagline: 'Механизированная штукатурка',
   telegramUrl: 'https://t.me/+79525121473',
   vkUrl: 'https://vk.com/gruzzprofi174pabota',
