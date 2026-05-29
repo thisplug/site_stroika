@@ -5,6 +5,7 @@ import {
   HouseIcon,
   LayersIcon,
   ScopeIcon,
+  ShieldIcon,
 } from '@/components/icons/FeatureIcons'
 
 const iconMap = {
@@ -12,6 +13,7 @@ const iconMap = {
   layers: LayersIcon,
   scope: ScopeIcon,
   calendar: CalendarIcon,
+  shield: ShieldIcon,
 } as const
 
 export function FeaturesGrid() {
@@ -21,8 +23,9 @@ export function FeaturesGrid() {
         const Icon = iconMap[feature.icon]
         return (
           <FeatureCard
-            key={feature.icon}
+            key={feature.title}
             icon={<Icon className="h-7 w-7" />}
+            title={feature.title}
             text={feature.text}
           />
         )

@@ -38,3 +38,12 @@ export function CalendarIcon(props: IconProps) {
     </svg>
   )
 }
+
+export function ShieldIcon(props: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" {...props}>
+      <path d="M12 3 4 6.5V12c0 4.5 3.4 8.7 8 9.5 4.6-.8 8-5 8-9.5V6.5L12 3Z" />
+      <path d="m9 12 2 2 4-4" />
+    </svg>
+  )
+}

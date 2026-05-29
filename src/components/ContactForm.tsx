@@ -69,6 +69,9 @@ export function ContactForm({ className, id = 'contacts' }: ContactFormProps) {
       <h2 className="text-base font-bold uppercase leading-snug tracking-wide text-ink sm:text-lg">
         {contactForm.title}
       </h2>
+      <p className="mt-3 text-sm leading-relaxed text-muted sm:text-[15px]">
+        {contactForm.subtitle}
+      </p>
 
       {submitted ? (
         <p className="mt-8 text-sm leading-relaxed text-muted">
