@@ -13,6 +13,13 @@ export const site = {
   emailHref: 'mailto:drogan8513@gmail.com',
   address: 'г. Челябинск, ул. Ворошилова, 57а',
   schedule: 'Пн–Сб: 9:00 – 19:00',
+  legal: {
+    name: 'Дроган Андрей Алексеевич',
+    ogrnip: '324745600212250',
+    inn: '744715990735',
+    address:
+      '454136, Челябинская область, г. Челябинск, Калининский район, ул. Ворошилова, 57а',
+  },
 } as const
 
 export const navLinks = [
