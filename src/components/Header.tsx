@@ -6,6 +6,7 @@ import {
   useState,
   type MouseEvent,
 } from 'react'
+import { BrandMark } from '@/components/BrandMark'
 import { navLinks, site } from '@/data/content'
 import { cn } from '@/lib/utils'
 
@@ -158,11 +159,7 @@ export function Header() {
           onClick={(e) => handleNavClick(e, '#hero')}
           className="flex min-w-0 shrink items-center gap-2"
         >
-          <img
-            src={site.logo}
-            alt={site.brand}
-            className="h-10 w-auto rounded-md border border-brand/20 object-contain sm:h-12"
-          />
+          <BrandMark />
           <div className="min-w-0">
             <p className="font-brand truncate text-sm font-bold uppercase tracking-[0.005em] text-brand sm:text-xl">
               {site.brand}

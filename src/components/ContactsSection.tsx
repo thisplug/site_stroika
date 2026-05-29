@@ -1,43 +1,38 @@
-import { contacts, site } from '@/data/content'
+import { contacts } from '@/data/content'
 import { SectionShell } from '@/components/SectionShell'
-
-const contactItems = [
-  { label: 'Телефон', value: site.phone, href: site.phoneHref },
-  { label: 'E-mail', value: site.email, href: site.emailHref },
-  { label: 'Адрес', value: site.address },
-  { label: 'Режим работы', value: site.schedule },
-] as const
 
 export function ContactsSection() {
   return (
     <SectionShell id="contacts" title={contacts.title} subtitle={contacts.subtitle}>
-      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-        {contactItems.map((item) => (
+      <div className="grid gap-4 sm:grid-cols-2">
+        {contacts.items.map((item) => (
           <div key={item.label} className="rounded-2xl border border-border bg-lavender p-5 sm:p-6">
             <p className="text-xs font-semibold uppercase tracking-wide text-muted">
+              <span className="mr-1.5" aria-hidden>
+                {item.icon}
+              </span>
               {item.label}
             </p>
             {'href' in item && item.href ? (
               <a
                 href={item.href}
-                className="mt-2 block text-base font-semibold text-ink transition-colors hover:text-brand"
+                className="mt-2 block text-base font-semibold text-ink transition-colors hover:text-brand sm:text-lg"
               >
                 {item.value}
               </a>
             ) : (
-              <p className="mt-2 text-base font-semibold text-ink">{item.value}</p>
+              <p className="mt-2 text-base font-semibold text-ink sm:text-lg">{item.value}</p>
+            )}
+            {'note' in item && item.note && (
+              <p className="mt-2 text-sm leading-relaxed text-muted">{item.note}</p>
             )}
           </div>
         ))}
-
-        <div className="rounded-2xl border border-border bg-surface p-5 sm:col-span-2 lg:col-span-4 sm:p-6">
-          <p className="text-xs font-semibold uppercase tracking-wide text-muted">Зона работы</p>
-          <p className="mt-2 text-base leading-relaxed text-ink/85">
-            Челябинск и ближайшие районы. Выезд бригады и доставка материалов согласовываются при
-            оформлении заказа.
-          </p>
-        </div>
       </div>
+
+      <p className="mt-8 text-center text-sm leading-relaxed text-ink/85 sm:text-base">
+        {contacts.closing}
+      </p>
     </SectionShell>
   )
 }

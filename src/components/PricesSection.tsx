@@ -5,15 +5,23 @@ import { Button } from '@/components/ui/Button'
 export function PricesSection() {
   return (
     <SectionShell id="prices" title={prices.title} subtitle={prices.subtitle} tone="surface">
-      <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
+      <p className="-mt-4 mb-10 max-w-3xl text-base leading-relaxed text-ink/85">{prices.note}</p>
+
+      <div className="grid gap-4 sm:grid-cols-2">
         {prices.items.map((item) => (
           <article
             key={item.name}
-            className="flex flex-col rounded-3xl border border-border bg-lavender p-6"
+            className="flex flex-col rounded-3xl border border-border bg-lavender p-6 sm:p-7"
           >
-            <h3 className="text-lg font-bold text-ink">{item.name}</h3>
+            <h3 className="text-base font-bold leading-snug text-ink sm:text-lg">{item.name}</h3>
             <p className="mt-3 text-2xl font-extrabold text-brand">{item.price}</p>
-            <p className="mt-3 flex-1 text-sm leading-relaxed text-muted">{item.note}</p>
+            <div className="mt-4 space-y-2.5">
+              {item.details.map((line) => (
+                <p key={line} className="text-sm leading-relaxed text-muted sm:text-[15px]">
+                  {line}
+                </p>
+              ))}
+            </div>
           </article>
         ))}
       </div>
